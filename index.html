@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Hangman</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main__title">Hangman</h1>
+      <p class="desc">Find the hidden word, Enter a letter!</p>
+    </header>
+
+    <div class="container">
+      <svg viewBox="0 0 200 200">
+        <line
+          id="base"
+          x1="20"
+          y1="180"
+          x2="80"
+          y2="180"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="pole"
+          x1="50"
+          y1="180"
+          x2="50"
+          y2="20"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="beam"
+          x1="50"
+          y1="20"
+          x2="120"
+          y2="20"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="rope"
+          x1="120"
+          y1="20"
+          x2="120"
+          y2="40"
+          stroke="white"
+          stroke-width="2"
+        />
+        <circle
+          id="head"
+          cx="120"
+          cy="60"
+          r="20"
+          stroke="white"
+          stroke-width="2"
+          fill="white"
+        />
+        <line
+          id="body"
+          x1="120"
+          y1="80"
+          x2="120"
+          y2="130"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="left-arm"
+          x1="120"
+          y1="90"
+          x2="100"
+          y2="100"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="right-arm"
+          x1="120"
+          y1="90"
+          x2="140"
+          y2="100"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="left-leg"
+          x1="120"
+          y1="130"
+          x2="100"
+          y2="150"
+          stroke="white"
+          stroke-width="2"
+        />
+        <line
+          id="right-leg"
+          x1="120"
+          y1="130"
+          x2="140"
+          y2="150"
+          stroke="white"
+          stroke-width="2"
+        />
+      </svg>
+      <div>
+        wrong
+        <p class="wrong__letters"></p>
+      </div>
+    </div>
+    <div class="gess__container">
+      <div class="word__input"></div>
+    </div>
+
+    <div class="keyboard__wrapper">
+      <div class="keyboard">
+        <span class="key">q</span>
+        <span class="key">w</span>
+        <span class="key">e</span>
+        <span class="key">r</span>
+        <span class="key">t</span>
+        <span class="key">y</span>
+        <span class="key">u</span>
+        <span class="key">i</span>
+        <span class="key">o</span>
+        <span class="key">p</span>
+        <span class="key">a</span>
+        <span class="key">s</span>
+        <span class="key">d</span>
+        <span class="key">f</span>
+        <span class="key">g</span>
+        <span class="key">h</span>
+        <span class="key">j</span>
+        <span class="key">k</span>
+        <span class="key">l</span>
+        <span class="key">z</span>
+        <span class="key">x</span>
+        <span class="key">c</span>
+        <span class="key">v</span>
+        <span class="key">b</span>
+        <span class="key">n</span>
+        <span class="key">m</span>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="msg">
+      <p></p>
+      <button class="play__again">Play Again</button>
+    </div>
+
+    <div class="warning__msg">You have entered this letter before !</div>
+  </body>
+</html>

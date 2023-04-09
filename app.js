@@ -126,6 +126,8 @@ function check(letter) {
     warningMsg.classList.add('show');
     warningMsg.addEventListener('animationend', () => {
       warningMsg.classList.remove('show');
+      console.log(letters);
+      console.log(text);
     });
   } else if ([...randomWord].includes(letter)) {
     domElms(letter);
@@ -134,7 +136,7 @@ function check(letter) {
     letters.length !== randomWord.length
   ) {
     counter--;
-    wrongLetters.innerText += letter;
+    wrongLetters.innerText += `${letter},`;
     manBody();
   }
 }
